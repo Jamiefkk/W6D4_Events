@@ -1,3 +1,15 @@
 body {
   font-family: Palatino;
 }
+
+
+.new-item-form{
+  display: flex;
+}
+
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+

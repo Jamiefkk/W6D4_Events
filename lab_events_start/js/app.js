@@ -10,8 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // const categoryInput = document.querySelector('#category');
   // categoryInput.addEventListener('change', handleCategoryInput)
 
-  const form = document.querySelector('#new-item-form')
-  form.addEventListener('submit', handleForm)
+  const form = document.querySelector('#new-item-form');
+  form.addEventListener('submit', handleForm);
+
+  const deleteItem = document.querySelector('#delete-button');
+  deleteItem.addEventListener('click', handleDeleteForm);
+
 
 });
 
@@ -25,8 +29,22 @@ const handleForm = function (event) {
   submitValue.textContent = `${title} | ${author} | ${category}`
   const list = document.querySelector('#reading-list')
   list.appendChild(submitValue);
+  const form = document.querySelector('#new-item-form');
+  form.reset();
 };
 
+const handleDeleteForm = function() {
+  console.log('delete')
+  myList = document.querySelector('#reading-list');
+  myList.innerHTML = '';
+}
+
+
+
+
+
+// myList = document.getElementById('myList');
+// myList.innerHTML
 
 
 
